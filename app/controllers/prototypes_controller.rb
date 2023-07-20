@@ -1,5 +1,8 @@
 class PrototypesController < ApplicationController
   def index
     @prototypes = Prototype.all
-    end
-end
+  end
+
+  def new
+    @tweet = Tweet.new
+  end
