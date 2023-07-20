@@ -1,0 +1,38 @@
+<main class="main">
+  <div class="inner">
+    <div class="contents row">
+      <% @comments.each do |comment| %>
+        <div class="content_post">
+          <p><%= comment.text %></p>
+          <span class="name">
+            <%= comment.name %>
+          </span>
+          <div class="more">
+            <span><%= image_tag 'arrow_top.png' %></span>
+            <ul class="more_list">
+              <li>
+                <%= link_to '詳細', tweet_path(tweet.id) %>
+              </li>
+              <li>
+                <%= link_to '編集', edit_comment_path(comment.id) %>
+              </li>
+              <li>
+                <%= link_to '削除', comment_path(comment.id), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <%# ログインしているときは以下を表示する %>
+      <%# <div class="greeting"> %>
+        <%# こんにちは、 %>
+        <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
+      <%# </div> %>
+    <%# // ログインしているときは上記を表示する %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    </div>
+  </div>
+</main>
