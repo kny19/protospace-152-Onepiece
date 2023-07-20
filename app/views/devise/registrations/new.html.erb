@@ -4,6 +4,30 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+        <%= f.label :user %> <em>(20 characters maximum)</em><br />
+        <%= f.text_field :user, autofocus: true, maxlength: "20" %>
+  </div>
+
+
+
+ <div class="field">
+        <%= f.label :profile %> <em>(100 characters maximum)</em><br />
+        <%= f.text_field :profile, autofocus: true, maxlength: "100" %>
+  </div>
+
+      <div class="field">
+        <%= f.label :affiliation %> <em>(50 characters maximum)</em><br />
+        <%= f.text_field :affiliation, autofocus: true, maxlength: "50" %>
+      </div>
+
+    <div class="field">
+        <%= f.label :position %> <em>(50 characters maximum)</em><br />
+        <%= f.text_field :position, autofocus: true, maxlength: "50" %>
+    </div>
+   
+
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
