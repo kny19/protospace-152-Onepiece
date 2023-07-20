@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show]
+
   def index
     @comments = Comment.all
   end
