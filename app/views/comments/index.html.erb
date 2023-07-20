@@ -5,6 +5,17 @@
         <%# こんにちは、 %>
         <%# <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
       <%# </div> %>
+        <ul class="more_list">
+          <li>
+            <%= link_to '詳細', tweet_path(tweet.id) %>
+          </li>
+          <li>
+            <%= link_to '編集', edit_tweet_path(tweet.id) %>
+          </li>
+          <li>
+            <%= link_to '削除', tweet_path(tweet.id), data: { turbo_method: :delete } %>
+          </li>
+        </ul>
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
