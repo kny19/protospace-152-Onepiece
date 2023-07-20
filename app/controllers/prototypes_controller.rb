@@ -1,4 +1,5 @@
 class PrototypesController < ApplicationController
   def index
-  end
+    @prototypes = Prototype.all
+    end
 end
