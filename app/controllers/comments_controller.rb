@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text)
+    params.require(:comment).permit(:name, :image, :text)
   end
 end
 
