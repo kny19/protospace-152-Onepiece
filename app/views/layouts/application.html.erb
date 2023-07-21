@@ -16,7 +16,7 @@
            <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
-            <%= link_to "New Proto", new_Onepiece<_path, class: "post" %>
+            <%= link_to "New Proto", destroy_user_session_path, class: "post" %>
             <p>こんにちは <%= current_user.user %>さん</p>
           </div>
         <% else %>
@@ -41,7 +41,7 @@
           <%# ログインしていないときは以下を表示するようにしましょう %>
             <div class="nav__right">
               <%= link_to "ログイン", root_path, class: :nav__btn %>
-              <%= link_to "新規登録", root_path, class: :nav__btn %>
+              <%= link_to "新規登録",new_user_registration_path, class: :nav__btn %>
             </div>
           <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>

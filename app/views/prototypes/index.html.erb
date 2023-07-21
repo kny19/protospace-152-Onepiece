@@ -3,7 +3,8 @@
     <%# ログインしているときは以下を表示する %>
       <div class="greeting">
         <p> こんにちは </p>
-         <%= link_to "ユーザー名さん", root_path, class: :greeting__link%>
+         <%= link_to current_user.user, root_path, class: :greeting__link%>
+          <p>こんにちは <%= current_user.user %>さん</p>
       </div>
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
